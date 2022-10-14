@@ -3,6 +3,9 @@
 #include <stdio.h>
 /**
  * main determine if a random is possitive, negative or zero.
+ *
+ * main - entry point
+ *
  * return: 0 on success
  */
 int main(void)
