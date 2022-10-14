@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main determine if a random is possitive, negative or zero.
- *
  * main - entry point
+ *
+ * Description: determine if a random is possitive, negative or zero
  *
  * return: 0 on success
  */
