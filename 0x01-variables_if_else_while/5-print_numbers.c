@@ -4,7 +4,7 @@
  *
  * Description: prints number zero to ten
  *
- * Retun: Return 0 on success
+ * Retun:Always 0 on success
  */
 int main(void)
 {
