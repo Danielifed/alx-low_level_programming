@@ -6,7 +6,7 @@
  *
  * Retun:Always 0 on success
  */
-int main(void)
+int main()
 {
 	printf("0123456789\n");
 	return (0);
