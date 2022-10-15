@@ -6,8 +6,8 @@
  *
  * Retun:Always 0 on success
  */
-int main(void)
+int main(0)
 {
-	printf("0123456789'\n'");
+	printf("0123456789\n");
 	return (0);
 }
