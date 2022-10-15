@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main - entry point
+ * main - prints the numbers from 0-9
  *
  * Description: prints number zero to ten
  *
