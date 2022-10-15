@@ -1,12 +1,12 @@
 #include<stdio.h>
 /**
- * main - prints the numbers from 0-9
+ * main - entry point
  *
  * Description: prints number zero to ten
  *
- * Retun:Always 0 on success
+ * Retun: 0 on success
  */
-int main(0)
+int main(void)
 {
 	printf("0123456789\n");
 	return (0);
