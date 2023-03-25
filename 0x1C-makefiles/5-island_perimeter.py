@@ -1,41 +1,39 @@
 #!/usr/bin/python3
 """
-    This module contains a function that finds the perimeter
-    of the island described in grid
+    This is the island_perimeter module.
 """
+
+
+def neighbour(grid, y, x):
+    """
+        Finds the number of neighbours of a square.
+        Args:
+            grid (list): the matrix.
+            y (int): height parameter.
+            x (int): width parameter.
+    """
+    nb = 4
+
+    if (y > 0) and grid[y - 1][x]:
+        nb -= 1
+    if (x > 0) and grid[y][x - 1]:
+        nb -= 1
+    if (y < len(grid) - 1) and grid[y + 1][x]:
+        nb -= 1
+    if (x < len(grid[0]) - 1) and grid[y][x + 1]:
+        nb -= 1
+    return nb
 
 
 def island_perimeter(grid):
     """
-        Finds the perimeter of an island in a grid
-        ** grid is a list of integer
-        ** 0 represents a water zone
-        ** 1 represents a land zone
-        ** One cell is a square with side length 1
-        ** cells are connected horizontally/vertically (not diagonally
-        ** gridth is rectangular, width and height doesnt exceed 100
+        Finds the island perimeter.
+        Args:
+            grid (list): the matrix.
     """
-
     perimeter = 0
-    for i in range(len(grid)):
-
-        if 1 in grid[i]:
-            perimeter += 2
-
-        for j in range(len(grid[i])):
-            if grid[i][j] == 1:
-                try:
-                    if grid[i - 1][j] == 0 or i == 0:
-                        perimeter += 1
-                except IndexError:
-                    if i == 0:
-                        preimeter += 1
-
-                try:
-                    if grid[i + 1][j] == 0 or i == len(grid) - 1:
-                        perimeter += 1
-                except IndexError:
-                    if i == len(grid) - 1:
-                        perimeter += 1
-
+    for y in range(len(grid)):
+        for x in range(len(grid[0])):
+            if grid[y][x] == 1:
+                perimeter += neighbour(grid, y, x)
     return perimeter
