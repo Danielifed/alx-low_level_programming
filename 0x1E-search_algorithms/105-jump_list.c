@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * min_ - finds the smallest between two numbers
+ * min - finds the smallest between two numbers
  * @m: the first num
  * @n: the second num
  *
@@ -59,13 +59,13 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	{
 		m = r;
 		r += sqrt(size);
-		temp = get_at_index(list, min_(r, size - 1));
+		temp = get_at_index(list, min(r, size - 1));
 		if (r >= size - 1)
 			break;
-		printf("Value checked at index[%ld] = [%d]\n", min_(r, size - 1), temp->n);
+		printf("Value checked at index[%ld] = [%d]\n", min(r, size - 1), temp->n);
 	}
 
-	printf("Value found between indexes [%ld] and [%ld]\n", m, min_(r, size - 1));
+	printf("Value found between indexes [%ld] and [%ld]\n", m, min(r, size - 1));
 
 	temp = get_at_index(list, m);
 	while (temp->n <= value)

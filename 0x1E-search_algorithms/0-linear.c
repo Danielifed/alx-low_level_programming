@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_search - this will search for an element in an array using the
+ * linear_search - search for element in an array using the
  * linear search algorithm
  * @array: the array to be searched
  * @size: the size of the array
@@ -11,17 +11,16 @@
  */
 int linear_search(int *array, size_t size, int value)
 {
-	if (array == NULL)
-	{
-		return (-1);
-	}
+	size_t u;
 
-	for (size_t i = 0; i < size; i++)
+	if (!array)
+		return (-1);
+
+	for (u = 0; u < size; u++)
 	{
-		if (array[i] == value)
-		{
-			return (i);
-		}
+		printf("Value checked array[%ld] = [%d]\n", u, array[u]);
+		if (array[u] == value)
+			return (u);
 	}
 
 	return (-1);

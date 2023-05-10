@@ -38,17 +38,21 @@ typedef struct skiplist_s
 	struct skiplist_s *express;
 } skiplist_t;
 
-int linear_search(int *array, size_t size, int value);
-int binary_search(int *array, size_t size, int value);
-size_t min(size_t g, size_t p);
-int jump_search(int *array, size_t size, int value);
-int interpolation_search(int *array, size_t size, int value);
-int exponential_search(int *array, size_t size, int value);
-int _search(int *array, size_t begin, size_t end, int value);
-int advanced_binary(int *array, size_t size, int value);
-size_t min(size_t m, size_t r);
-listint_t *get_at_index(listint_t *list, size_t index);
-listint_t *jump_list(listint_t *list, size_t size, int value);
-skiplist_t *linear_skip(skiplist_t *list, int value);
+listint_t *create_list(int *, size_t);
+void print_list(const listint_t *);
+void free_list(listint_t *);
+
+skiplist_t *create_skiplist(int *, size_t);
+void print_skiplist(const skiplist_t *);
+void free_skiplist(skiplist_t *);
+
+int linear_search(int *, size_t, int);
+int binary_search(int *, size_t, int);
+int jump_search(int *, size_t, int);
+int interpolation_search(int *, size_t, int);
+int exponential_search(int *, size_t, int);
+int advanced_binary(int *, size_t, int);
+listint_t *jump_list(listint_t *, size_t, int);
+skiplist_t *linear_skip(skiplist_t *, int);
 
 #endif
