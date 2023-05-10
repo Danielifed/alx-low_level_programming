@@ -37,10 +37,10 @@ int binary_search(int *array, size_t size, int value)
 /**
  * print_array - Prints an array of integers
  * @array: A pointer to the first element of the array to print
- * @left: The leftmost index to print
- * @right: The rightmost index to print
+ * @begin: The leftmost index to print
+ * @end: The rightmost index to print
  */
-void print_array(int *array, size_t left, size_t right)
+void print_array(int *array, size_t begin, size_t end)
 {
 	size_t u;
 
