@@ -6,51 +6,37 @@
  * @size: The number of elements in array
  * @value: The value to search for
  *
- * Return: The index where value is located, or -1
+ * Return: The index where value is located, or -1 if not found
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t begin = 0, end = size - 1, mid;
-
-	if (!array)
+	if (array == NULL)
 		return (-1);
 
-	while (begin <= end)
+	size_t start = 0;
+	size_t end = size - 1;
+
+	while (start <= end)
 	{
-		mid = (begin + end) / 2;
+		size_t mid = (start + end) / 2;
+
 		printf("Searching in array: ");
-		print_array(array, begin, end);
+		for (size_t u = start; u <= end; u++)
+		{
+			printf("%d", array[u]);
+			if (u < end)
+				printf(", ");
+		}
+		printf("\n");
 
 		if (array[mid] == value)
 			return (mid);
 
-		else if (array[mid] < value)
-			begin = mid + 1;
-
+		if (array[mid] < value)
+			start = mid + 1;
 		else
 			end = mid - 1;
 	}
 
 	return (-1);
-}
-
-/**
- * print_array - Prints an array of integers
- * @array: A pointer to the first element of the array to print
- * @begin: The leftmost index to print
- * @end: The rightmost index to print
- */
-void print_array(int *array, size_t begin, size_t end)
-{
-	size_t u;
-
-	for (u = begin; u <= end; u++)
-	{
-		printf("%d", array[u]);
-
-		if (begin != end)
-			printf(", ");
-	}
-
-	printf("\n");
 }
