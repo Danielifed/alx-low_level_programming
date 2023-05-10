@@ -7,7 +7,7 @@
  *
  * Return: the smallest
  */
-size_t min_(size_t m, size_t r)
+size_t min(size_t m, size_t r)
 {
 	if (m > r)
 		return (r);

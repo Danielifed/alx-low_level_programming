@@ -46,7 +46,7 @@ int interpolation_search(int *array, size_t size, int value);
 int exponential_search(int *array, size_t size, int value);
 int _search(int *array, size_t begin, size_t end, int value);
 int advanced_binary(int *array, size_t size, int value);
-size_t min_(size_t m, size_t r)
+size_t min(size_t m, size_t r);
 listint_t *get_at_index(listint_t *list, size_t index);
 listint_t *jump_list(listint_t *list, size_t size, int value);
 skiplist_t *linear_skip(skiplist_t *list, int value);
