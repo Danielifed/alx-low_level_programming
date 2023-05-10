@@ -3,7 +3,7 @@
 /**
  * min - finds the smallest between two numbers
  * @m: the first num
- * @n: the second num
+ * @r: the second num
  *
  * Return: the smallest
  */
