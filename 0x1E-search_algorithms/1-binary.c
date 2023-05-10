@@ -44,7 +44,7 @@ void print_array(int *array, size_t left, size_t right)
 {
 	size_t u;
 
-	for (u = begin; u <= end; i++)
+	for (u = begin; u <= end; u++)
 	{
 		printf("%d", array[u]);
 
